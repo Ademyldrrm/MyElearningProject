@@ -142,6 +142,10 @@
     <Compile Include="Migrations\202309071828227_mig1.designer.cs">
       <DependentUpon>202309071828227_mig1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202309131728503_mig_add_imageurl_instructor.cs" />
+    <Compile Include="Migrations\202309131728503_mig_add_imageurl_instructor.designer.cs">
+      <DependentUpon>202309131728503_mig_add_imageurl_instructor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -805,11 +809,13 @@
     <Content Include="Views\AdminLayout\PartialFooter.cshtml" />
     <Content Include="Views\Category\AddCategory.cshtml" />
     <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Instructor\AddInstructor.cshtml" />
+    <Content Include="Views\Instructor\UpdateInstructur.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Instructor\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -827,6 +833,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202309071828227_mig1.resx">
       <DependentUpon>202309071828227_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309131728503_mig_add_imageurl_instructor.resx">
+      <DependentUpon>202309131728503_mig_add_imageurl_instructor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
