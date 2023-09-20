@@ -1,25 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using MyElearningProject.DAL.Context;
+﻿using MyElearningProject.DAL.Context;
 using MyElearningProject.DAL.Entities;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace MyElearningProject.Controllers
 {
     public class InstructorController : Controller
     {
         ELearningContext context = new ELearningContext();
-      
+
         public ActionResult Index()
         {
+            ViewBag.sayfa = "Eğitmen Sayfası";
+            ViewBag.aciklama = "Eğitmen Listeleme Sayfası";
+            TempData["PageTitle"] = ViewBag.sayfa;
+            TempData["PageDescription"] = ViewBag.aciklama;
             var values = context.Instructors.ToList();
             return View(values);
         }
         [HttpGet]
         public ActionResult AddInstructor()
         {
+            ViewBag.sayfa = "Eğitmen Sayfası";
+            ViewBag.aciklama = "Eğitmen Ekleme Sayfası";
+            TempData["PageTitle"] = ViewBag.sayfa;
+            TempData["PageDescription"] = ViewBag.aciklama;
             return View();
         }
         [HttpPost]
@@ -39,6 +44,10 @@ namespace MyElearningProject.Controllers
         [HttpGet]
         public ActionResult UpdateInstructur(int id)
         {
+            ViewBag.sayfa = "Eğitmen Sayfası";
+            ViewBag.aciklama = "Eğitmen Güncelleme Sayfası";
+            TempData["PageTitle"] = ViewBag.sayfa;
+            TempData["PageDescription"] = ViewBag.aciklama;
             var values = context.Instructors.Find(id);
             return View(values);
         }

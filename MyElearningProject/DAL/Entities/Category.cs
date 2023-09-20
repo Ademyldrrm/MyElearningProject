@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
 namespace MyElearningProject.DAL.Entities
 {
@@ -13,6 +10,6 @@ namespace MyElearningProject.DAL.Entities
 
         public string CategoryName { get; set; }
 
-        public List <Course> Courses{ get; set; }
+        public List<Course> Courses { get; set; }
     }
 }

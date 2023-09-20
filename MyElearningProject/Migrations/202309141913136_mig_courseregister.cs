@@ -1,8 +1,7 @@
 ﻿namespace MyElearningProject.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class mig_courseregister : DbMigration
     {
         public override void Up()
@@ -10,20 +9,20 @@
             CreateTable(
                 "dbo.CourseRegisters",
                 c => new
-                    {
-                        CourseRegisterID = c.Int(nullable: false, identity: true),
-                        StudentID = c.Int(nullable: false),
-                        CourseID = c.Int(nullable: false),
-                        Date = c.DateTime(nullable: false),
-                    })
+                {
+                    CourseRegisterID = c.Int(nullable: false, identity: true),
+                    StudentID = c.Int(nullable: false),
+                    CourseID = c.Int(nullable: false),
+                    Date = c.DateTime(nullable: false),
+                })
                 .PrimaryKey(t => t.CourseRegisterID)
                 .ForeignKey("dbo.Courses", t => t.CourseID, cascadeDelete: true)
                 .ForeignKey("dbo.Students", t => t.StudentID, cascadeDelete: true)
                 .Index(t => t.StudentID)
                 .Index(t => t.CourseID);
-            
+
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.CourseRegisters", "StudentID", "dbo.Students");

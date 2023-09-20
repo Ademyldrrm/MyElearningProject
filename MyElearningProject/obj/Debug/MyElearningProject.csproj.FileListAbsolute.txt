@@ -83,10 +83,15 @@ C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Deb
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig1.resources
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.csproj.GenerateResource.cache
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_add_imageurl_instructor.resources
-C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.csproj.AssemblyReference.cache
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_add_student_table.resources
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_students.resources
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_add_Course.resources
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_relation.resources
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_add_Relation_course_instructor.resources
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_courseregister.resources
+C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.csproj.AssemblyReference.cache
+C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_feature_add.resources
+C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_about_added.resources
+C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_ContactInformation.resources
+C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_Contac.resources
+C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_add_ınstructor_Title_CoverImage.resources

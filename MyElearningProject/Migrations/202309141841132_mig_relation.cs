@@ -1,8 +1,7 @@
 ﻿namespace MyElearningProject.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class mig_relation : DbMigration
     {
         public override void Up()
@@ -11,7 +10,7 @@
             CreateIndex("dbo.Courses", "CategoryID");
             AddForeignKey("dbo.Courses", "CategoryID", "dbo.Categories", "CategoryID", cascadeDelete: true);
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.Courses", "CategoryID", "dbo.Categories");

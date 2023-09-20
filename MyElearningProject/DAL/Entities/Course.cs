@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace MyElearningProject.DAL.Entities
 {
@@ -23,7 +20,7 @@ namespace MyElearningProject.DAL.Entities
 
         public int InstructorID { get; set; }
 
-        public  virtual Instructor Instructor { get; set; }
+        public virtual Instructor Instructor { get; set; }
 
         public List<CourseRegister> CourseRegisters { get; set; }
 

@@ -1,0 +1,52 @@
+﻿@model List<MyElearningProject.DAL.Entities.Testimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                @if (Model == null || Model.Count == 0)
+                {
+                    <p>Referans bulunamadı.</p>
+                }
+
+                else
+                {
+                    <h4>Referans Listesi</h4>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>#</th>
+                            <th>Adı Soyadı</th>
+                            <th>Unvan</th>
+                            <th>Resim</th>
+                            <th>Yorum</th>
+                            <th>Durum</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                            
+                            
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.TestimonialID</td>
+                                <td>@item.NameSurname </td>
+                                <td>@item.Title </td>
+                                <td>@item.ImageUrl</td>
+                                <td>@item.Comment</td>
+                                <td>@item.Status</td>
+                                <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a></td>
+                                <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-success">Güncelle</a></td>
+                               
+                            </tr>
+                        }
+                    </table>
+                }
+                <a href="/Testimonial/AddTestimonial/" class="btn btn-outline-primary">Yeni Referans Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>

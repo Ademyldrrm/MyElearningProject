@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace MyElearningProject.DAL.Entities
+﻿namespace MyElearningProject.DAL.Entities
 {
     public class Testimonial
     {
@@ -15,6 +10,6 @@ namespace MyElearningProject.DAL.Entities
         public bool Status { get; set; }
 
 
-       
+
     }
 }

@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MyElearningProject.Controllers
 {
     public class AdminLayoutController : Controller
     {
-        // GET: AdminLayout
         public ActionResult Index()
         {
             return View();
@@ -31,6 +26,8 @@ namespace MyElearningProject.Controllers
         }
         public PartialViewResult PartialPageRowTitle()
         {
+            TempData["sayfa"] = ViewBag.sayfa;
+            TempData["aciklama"] = ViewBag.aciklama;
             return PartialView();
         }
         public PartialViewResult PartialPreloader()

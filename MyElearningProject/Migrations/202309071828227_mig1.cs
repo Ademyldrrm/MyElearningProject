@@ -1,8 +1,7 @@
 ﻿namespace MyElearningProject.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class mig1 : DbMigration
     {
         public override void Up()
@@ -10,18 +9,18 @@
             CreateTable(
                 "dbo.Testimonials",
                 c => new
-                    {
-                        TestimonialID = c.Int(nullable: false, identity: true),
-                        NameSurname = c.String(),
-                        Title = c.String(),
-                        ImageUrl = c.String(),
-                        Comment = c.String(),
-                        Status = c.Boolean(nullable: false),
-                    })
+                {
+                    TestimonialID = c.Int(nullable: false, identity: true),
+                    NameSurname = c.String(),
+                    Title = c.String(),
+                    ImageUrl = c.String(),
+                    Comment = c.String(),
+                    Status = c.Boolean(nullable: false),
+                })
                 .PrimaryKey(t => t.TestimonialID);
-            
+
         }
-        
+
         public override void Down()
         {
             DropTable("dbo.Testimonials");
