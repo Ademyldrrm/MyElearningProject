@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "AddAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<form method="post">
+    <label>Başlık</label>
+    <input type="text" name="Title" class="form-control" required />
+    <br />
+    <label> Giriş</label>
+    <input type="text" name="Introduction" class="form-control" required />
+    <br />
+    <label>Açıklma</label>
+    <input type="text" name="Description" class="form-control" required />
+    <br />
+    <label>Resim</label>
+    <input type="text" name="ImageUrl" class="form-control" required />
+    <br />
+    <label>İçerik</label>
+    <input type="text" name="Content" class="form-control" required />
+    <br />
+    <br />
+    <button class="btn btn-primary">Hakkımızda Kaydet </button>
+</form>
+

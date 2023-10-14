@@ -128,27 +128,36 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AboutPageController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContactInformationController.cs" />
+    <Compile Include="Controllers\ContactPageController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\CoursePageController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ElearningController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
+    <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\ContactInformation.cs" />
     <Compile Include="DAL\Entities\Contact.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Feature.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
+    <Compile Include="DAL\Entities\Process.cs" />
+    <Compile Include="DAL\Entities\Review.cs" />
     <Compile Include="DAL\Entities\Student.cs" />
     <Compile Include="DAL\Entities\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
@@ -205,6 +214,22 @@
     <Compile Include="Migrations\202309192007597_mig_add_ınstructor_Title_CoverImage.cs" />
     <Compile Include="Migrations\202309192007597_mig_add_ınstructor_Title_CoverImage.designer.cs">
       <DependentUpon>202309192007597_mig_add_ınstructor_Title_CoverImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309221720461_mig_comment.cs" />
+    <Compile Include="Migrations\202309221720461_mig_comment.designer.cs">
+      <DependentUpon>202309221720461_mig_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202309221730178_mig_relations_comment.cs" />
+    <Compile Include="Migrations\202309221730178_mig_relations_comment.designer.cs">
+      <DependentUpon>202309221730178_mig_relations_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310031323298_mig_add_review.cs" />
+    <Compile Include="Migrations\202310031323298_mig_add_review.designer.cs">
+      <DependentUpon>202310031323298_mig_add_review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310031508218_mig_add_process.cs" />
+    <Compile Include="Migrations\202310031508218_mig_add_process.designer.cs">
+      <DependentUpon>202310031508218_mig_add_process.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1021,6 +1046,31 @@
     <Content Include="Views\InstructorAnalysis\Index.cshtml" />
     <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
     <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
+    <Content Include="Views\InstructorAnalysis\CourseListByInstructor.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\MYCourseList.cshtml" />
+    <Content Include="Views\About\AddAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialNavbar.cshtml" />
+    <Content Include="Views\Default\PartialScript.cshtml" />
+    <Content Include="Views\Default\PartialCarousel.cshtml" />
+    <Content Include="Views\Default\PartialFeature.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialCategories.cshtml" />
+    <Content Include="Views\Default\PartialCourse.cshtml" />
+    <Content Include="Views\Default\PartialInstructors.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\AboutPage\Index.cshtml" />
+    <Content Include="Views\AboutPage\PartialHeader.cshtml" />
+    <Content Include="Views\CoursePage\Index.cshtml" />
+    <Content Include="Views\CoursePage\PartialHeader.cshtml" />
+    <Content Include="Views\ContactPage\Index.cshtml" />
+    <Content Include="Views\ContactPage\PartialHeader.cshtml" />
+    <Content Include="Views\ContactPage\PartialContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1078,6 +1128,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202309192007597_mig_add_ınstructor_Title_CoverImage.resx">
       <DependentUpon>202309192007597_mig_add_ınstructor_Title_CoverImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309221720461_mig_comment.resx">
+      <DependentUpon>202309221720461_mig_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202309221730178_mig_relations_comment.resx">
+      <DependentUpon>202309221730178_mig_relations_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310031323298_mig_add_review.resx">
+      <DependentUpon>202310031323298_mig_add_review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310031508218_mig_add_process.resx">
+      <DependentUpon>202310031508218_mig_add_process.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

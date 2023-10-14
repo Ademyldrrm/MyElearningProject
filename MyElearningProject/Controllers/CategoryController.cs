@@ -10,6 +10,10 @@ namespace MyElearningProject.Controllers
         ELearningContext context = new ELearningContext();
         public ActionResult Index()
         {
+            ViewBag.sayfa = "Kategori Sayfası";
+            ViewBag.aciklama = "Kategori Listeleme";
+            TempData["PageTitle"] = ViewBag.sayfa;
+            TempData["PageDescription"] = ViewBag.aciklama;
             var values = context.Categories.ToList();
             return View(values);
         }
@@ -21,6 +25,10 @@ namespace MyElearningProject.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category category)
         {
+            ViewBag.sayfa = "Kategori Sayfası";
+            ViewBag.aciklama = "Kategori Listeleme";
+            TempData["PageTitle"] = ViewBag.sayfa;
+            TempData["PageDescription"] = ViewBag.aciklama;
             context.Categories.Add(category);
             context.SaveChanges();
             return RedirectToAction("Index");
@@ -35,6 +43,10 @@ namespace MyElearningProject.Controllers
         [HttpGet]
         public ActionResult UpdateCategory(int id)
         {
+            ViewBag.sayfa = "Kategori Sayfası";
+            ViewBag.aciklama = "Kategori Listeleme";
+            TempData["PageTitle"] = ViewBag.sayfa;
+            TempData["PageDescription"] = ViewBag.aciklama;
             var values = context.Categories.Find(id);
             return View(values);
         }
