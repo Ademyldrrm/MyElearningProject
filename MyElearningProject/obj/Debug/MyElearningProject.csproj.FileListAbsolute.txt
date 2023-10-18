@@ -103,3 +103,4 @@ C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Deb
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_contactadds.resources
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_12.resources
 C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_admintel.resources
+C:\Users\AdemYildirim\source\repos\MyElearningProject\MyElearningProject\obj\Debug\MyElearningProject.Migrations.mig_instructorpassword.resources

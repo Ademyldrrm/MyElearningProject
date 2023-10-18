@@ -17,7 +17,7 @@ namespace MyElearningProject.Controllers
         public PartialViewResult InstructorPanelPartial()
           
         {
-             int id = 2;
+            int id = 2;
             var values = context.Instructors.Where(x => x.InstructorID == id).ToList();
             var v1 = context.Instructors.Where(x => x.Name == "Adem" && x.Surname == "Yıldırım").Select(y => y.InstructorID).FirstOrDefault();
             ViewBag.courseCount = context.Courses.Where(x => x.InstructorID == 2).Count();

@@ -43,8 +43,8 @@ namespace MyElearningProject.Controllers
         }
         public PartialViewResult PartialCategories()
         {
-            var values = context.Categories.ToList();
-            return PartialView(values);
+            var value = context.Categories.OrderBy(x => x.CategoryID).Skip(2).FirstOrDefault();
+            return PartialView(new List<Category> { value });
         }
         public PartialViewResult PartialCourse()
         {

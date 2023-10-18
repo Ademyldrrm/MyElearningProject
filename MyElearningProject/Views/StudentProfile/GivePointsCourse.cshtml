@@ -1,12 +1,54 @@
-﻿
+﻿@model List<MyElearningProject.DAL.Entities.Course>
 @{
     Layout = null;
 }
 
 
-
 <!DOCTYPE html>
+
 <html lang="en">
+<head>
+    <style>
+        .container {
+            width: 300px;
+            height: auto;
+            background-color: rgb(226, 226, 226);
+            border: 3px solid rgb(155, 155, 155);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            display: block;
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            .fa-star
+
+        {
+            font-size: 20px;
+            translate: all 0.2s linear;
+            margin: 0 2px;
+            cursor: pointer;
+            &:hover
+
+        {
+            transform: scale(1.3);
+        }
+
+        }
+
+        .voted {
+            color: rgb(255, 208, 0);
+            transform: scale(1.3);
+        }
+
+        .hover {
+            color: rgb(255, 136, 0);
+            transform: scale(1.3);
+        }
+        }
+    </style>
+</head>
 
 @Html.Action("PartialHead", "AdminLayout")
 
@@ -53,14 +95,17 @@
 
         </aside>
 
-
+        <br />
+        <br />
         <div class="page-wrapper">
-
-            <div class="container-fluid">
-
-              Burası Oy verme Alanı olacak
-
+            <div class="container">
+                <i class="fa fa-star" data="1"></i>
+                <i class="fa fa-star" data="2"></i>
+                <i class="fa fa-star" data="3"></i>
+                <i class="fa fa-star" data="4"></i>
+                <i class="fa fa-star" data="5"></i>
             </div>
+            <button style="margin-left:" class="btn btn-primary" id="submitRating">Puan Ver</button>
 
             @Html.Action("PartialFooter", "AdminLayout")
 
@@ -69,6 +114,31 @@
     @Html.Action("PartialScript", "AdminLayout")
 </body>
 
+
+<script>
+    $('i.fa-star').click(function () {
+        $('i.fa-star').removeClass('voted');
+        var rate = this.getAttribute('data');
+        $(this).addClass('voted');
+        $(this).prevAll().addClass('voted');
+    });
+    $('i.fa-star').hover(function () {
+        $('i.fa-star').removeClass('hover');
+        $(this).addClass('hover');
+        $(this).prevAll().addClass('hover');
+    });
+    $('.container').mouseout(function () {
+        $('i.fa-star').removeClass('hover');
+    });
+    $('#submitRating').click(function () {
+        var votedStars = $('i.fa-star.voted').length;
+        if (votedStars > 0) {
+            alert('Tebrikler! Başarıyla ' + votedStars + ' puan verildi.');
+        } else {
+            alert('Lütfen bir puan seçin.');
+        }
+    });
+</script>
 </html>
 
 

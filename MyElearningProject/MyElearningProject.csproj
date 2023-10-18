@@ -144,6 +144,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorAnalysisController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\InstructorLoginController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\LoginPanelController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -250,6 +251,10 @@
     <Compile Include="Migrations\202310181728542_mig_admintel.cs" />
     <Compile Include="Migrations\202310181728542_mig_admintel.designer.cs">
       <DependentUpon>202310181728542_mig_admintel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310182010040_mig_instructorpassword.cs" />
+    <Compile Include="Migrations\202310182010040_mig_instructorpassword.designer.cs">
+      <DependentUpon>202310182010040_mig_instructorpassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1448,6 +1453,7 @@
     <Content Include="Views\StudentProfile\Index.cshtml" />
     <Content Include="Views\StudentProfile\MYCourseList.cshtml" />
     <Content Include="Views\StudentProfile\GivePointsCourse.cshtml" />
+    <Content Include="Views\InstructorLogin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1528,6 +1534,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310181728542_mig_admintel.resx">
       <DependentUpon>202310181728542_mig_admintel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310182010040_mig_instructorpassword.resx">
+      <DependentUpon>202310182010040_mig_instructorpassword.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

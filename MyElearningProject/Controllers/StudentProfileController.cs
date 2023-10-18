@@ -12,7 +12,7 @@ namespace MyElearningProject.Controllers
     {
         // GET: StudentProfile
         ELearningContext context = new ELearningContext();
-        //[Authorize]
+        [Authorize]
         public ActionResult Index()
         {
 
@@ -27,8 +27,7 @@ namespace MyElearningProject.Controllers
             var values = Session["CurrentMail"].ToString();
             int id = context.Students.Where(x => x.Email == values).Select(y => y.StudentID).FirstOrDefault();
             var courseList = context.Courses
-                .Where(c => context.Processes.Any(p => p.StudentID == id && p.CourseID == c.CourseID))
-                .ToList();
+                .Where(c => context.Processes.Any(p => p.StudentID == id && p.CourseID == c.CourseID)).ToList();
 
             List<SelectListItem> categories = (from x in context.Categories.ToList()
                                                select new SelectListItem
@@ -52,7 +51,8 @@ namespace MyElearningProject.Controllers
         
         public ActionResult GivePointsCourse()
         {
-            return View();
+            var values = context.Courses.ToList();
+            return View(values);
         }
 
     }

@@ -7,13 +7,11 @@ using System.Web.Security;
 using MyElearningProject.DAL.Context;
 using MyElearningProject.DAL.Entities;
 
-
 namespace MyElearningProject.Controllers
 {
-
-    public class AdminLoginController : Controller
+    public class InstructorLoginController : Controller
     {
-        // GET: Login
+        // GET: InstructorLogin
         ELearningContext context = new ELearningContext();
         [HttpGet]
         public ActionResult Index()
@@ -21,15 +19,15 @@ namespace MyElearningProject.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(AdminRegister adminRegister)
+        public ActionResult Index(Instructor ınstructor)
         {
-            var values = context.AdminRegisters.FirstOrDefault(x => x.AdminName == adminRegister.AdminName && x.Password == adminRegister.Password);
+            var values = context.Instructors.FirstOrDefault(x => x.Name == ınstructor.Name && x.Password == ınstructor.Password);
             if (values != null)
             {
-                FormsAuthentication.SetAuthCookie(values.AdminName, false);
-                Session["CurrentName"] = values.AdminName;
+                FormsAuthentication.SetAuthCookie(values.Name, false);
+                Session["CurrentName"] = values.Name;
                 Session.Timeout = 60;
-                return RedirectToAction("Index", "AdminProfile");
+                return RedirectToAction("Index", "InstructorAnalysis");
             }
             return View();
         }

@@ -12,6 +12,7 @@ namespace MyElearningProject.DAL.Entities
         public string CoverImage { get; set; }
         [StringLength(30)]
         public string Surname { get; set; }
+        public string Password { get; set; }
 
         public string ImageUrl { get; set; }
         public List<Course> Courses { get; set; }
