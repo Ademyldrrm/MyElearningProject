@@ -16,20 +16,22 @@
                     <tr>
                         <th>#</th>
                         <th>Kategori Adı</th>
+                        <th>Kategori Resim</th>
                         <th>Sil</th>
                         <th>Güncelle</th>
                     </tr>
                     @foreach (var item in Model)
                     {
-                         <tr>
-                    
-                                 <td>@item.CategoryID</td>
-                                 <td>@item.CategoryName</td>
-                                 <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a></td>
-                                 <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-success">Güncelle</a></td>
-                           
+                <tr>
 
-                         </tr>
+                    <td>@item.CategoryID</td>
+                    <td>@item.CategoryName</td>
+                    <td><img src="@item.CategoryImage" style="width:70px; height:60px; border-radius:50%" /></td>
+                    <td><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-success">Güncelle</a></td>
+
+
+                </tr>
                     }
 
                 </table>

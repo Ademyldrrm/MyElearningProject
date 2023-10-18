@@ -1,0 +1,103 @@
+﻿@model List<MyElearningProject.DAL.Entities.Course>
+@{
+    Layout = null;
+    int count = 0;
+}
+
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+@Html.Action("PartialHead", "AdminLayout")
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    @Html.Action("PartialPreloader", "AdminLayout")
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        @Html.Action("PartialNavbar", "AdminLayout")
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+
+                        <li>
+                            <a class="waves-effect waves-dark" href="/StudentProfile/Index" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Profilim</span></a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="/StudentProfile/MYCourseList" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Kurslarım</span></a>
+                        </li>
+                        
+
+                    </ul>
+
+                </nav>
+            </div>
+
+        </aside>
+
+
+        <div class="page-wrapper">
+
+            <div class="container-fluid">
+
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Kurs Adı</th>
+                        <th>Kateori</th>
+                        <th>Eğitmen</th>
+                        <th>Yorum Yap</th>
+
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        count++;
+                <tr>
+                    <td>@count</td>                    
+                    <td>@item.Title</td>
+                    <td>@item.Category.CategoryName</td>
+                    <td>@item.Instructor.Name</td>
+                    <td><a href="/StudentProfile/GivePointsCourse/" class="btn btn-success">Puan Ver</a></td>
+                </tr>
+
+                    }
+
+
+                </table>
+
+
+            </div>
+
+            @Html.Action("PartialFooter", "AdminLayout")
+
+        </div>
+    </div>
+    @Html.Action("PartialScript", "AdminLayout")
+</body>
+
+</html>
+
+
+
+
