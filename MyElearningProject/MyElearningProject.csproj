@@ -256,6 +256,10 @@
     <Compile Include="Migrations\202310182010040_mig_instructorpassword.designer.cs">
       <DependentUpon>202310182010040_mig_instructorpassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310241053079_mig_student_image.cs" />
+    <Compile Include="Migrations\202310241053079_mig_student_image.designer.cs">
+      <DependentUpon>202310241053079_mig_student_image.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1454,6 +1458,7 @@
     <Content Include="Views\StudentProfile\MYCourseList.cshtml" />
     <Content Include="Views\StudentProfile\GivePointsCourse.cshtml" />
     <Content Include="Views\InstructorLogin\Index.cshtml" />
+    <Content Include="Views\StudentProfile\CourseCommentAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1537,6 +1542,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310182010040_mig_instructorpassword.resx">
       <DependentUpon>202310182010040_mig_instructorpassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310241053079_mig_student_image.resx">
+      <DependentUpon>202310241053079_mig_student_image.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

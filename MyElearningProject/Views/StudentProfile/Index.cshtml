@@ -1,4 +1,4 @@
-﻿@model List<MyElearningProject.DAL.Entities.Student>
+﻿﻿@model List<MyElearningProject.DAL.Entities.Student>
 @{
     Layout = null;
 }
@@ -42,7 +42,7 @@
                         <li>
                             <a class="waves-effect waves-dark" href="/StudentProfile/MYCourseList" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Kurslarım</span></a>
                         </li>
-                        
+
 
                     </ul>
 
@@ -54,22 +54,68 @@
 
         <div class="page-wrapper">
 
-            <div class="container-fluid">
-
-                <h3>Profil Sayfası</h3>
-                <h4>Mail Adresi: @ViewBag.mail</h4>
-                <h5>Hoşgeldin @ViewBag.name</h5>
-               
+           <div class="row">
+            <!-- Column -->
+            <div class="col-lg-4 col-xlg-3 col-md-5">
+                <div class="card">
+                    <div class="card-block">
+                        <center class="m-t-30">
+                            <img src="@ViewBag.ımage" class="img-circle" width="150" />
+                            <h4 class="card-title m-t-10">Adem Yıldırım</h4>
+                            <h6 class="card-subtitle">Yönetim Bilişim Sistemleri</h6>
+                            <div class="row text-center justify-content-md-center">
+                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">254</font></a></div>
+                                <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>
+                            </div>
+                        </center>
+                    </div>
+                </div>
             </div>
 
-            @Html.Action("PartialFooter", "AdminLayout")
+            <div class="col-lg-8 col-xlg-9 col-md-7">
+                <div class="card">
+                    <div class="card-block">
+                        <form class="form-horizontal form-material">
+                            <div class="form-group">
+                                <label class="col-md-12">İsim Soyisim</label>
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="@ViewBag.name" class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="example-email" class="col-md-12">E Posta Adresi</label>
+                                <div class="col-md-12">
+                                    <input type="email" placeholder="@ViewBag.mail" class="form-control form-control-line" name="example-email" id="example-email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="example-email" class="col-md-12">Resim</label>
+                                <div class="col-md-12">
+                                    <input type="email" placeholder="@ViewBag.ımage" class="form-control form-control-line" name="example-email" id="example-email">
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <button class="btn btn-success">Profili Güncelle</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
         </div>
+
+        </div>
+
     </div>
     @Html.Action("PartialScript", "AdminLayout")
 </body>
 
 </html>
-
-
-

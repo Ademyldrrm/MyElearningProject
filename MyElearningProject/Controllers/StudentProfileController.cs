@@ -20,7 +20,9 @@ namespace MyElearningProject.Controllers
             var values = Session["CurrentMail"];
             ViewBag.mail = Session["CurrentMail"];
             ViewBag.name = context.Students.Where(x => x.Email == values).Select(y => y.Name + "" + y.Surname).FirstOrDefault();
+            ViewBag.ımage = context.Students.Where(x => x.Email == values).Select(y => y.ImageUrl).FirstOrDefault();
             return View();
+            
         }
         public ActionResult MYCourseList()
         {
@@ -53,6 +55,19 @@ namespace MyElearningProject.Controllers
         {
             var values = context.Courses.ToList();
             return View(values);
+        }
+        [HttpGet]
+        public ActionResult CourseCommentAdd()
+        {
+           
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CourseCommentAdd(Comment comment)
+        {
+            context.Comments.Add(comment);
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }

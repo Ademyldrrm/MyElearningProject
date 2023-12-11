@@ -12,6 +12,7 @@ namespace MyElearningProject.Controllers
         ELearningContext context = new ELearningContext();
         public ActionResult Index()
         {
+
             return View();
         }
         public PartialViewResult InstructorPanelPartial()

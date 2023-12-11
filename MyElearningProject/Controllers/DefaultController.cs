@@ -34,7 +34,8 @@ namespace MyElearningProject.Controllers
         }
         public PartialViewResult PartialFeature()
         {
-            return PartialView();
+            var values = context.Features.ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialAbout()
         {
@@ -58,7 +59,8 @@ namespace MyElearningProject.Controllers
         }
         public PartialViewResult PartialTestimonial()
         {
-            return PartialView();
+            var values = context.Comments.ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialFooter()
         {

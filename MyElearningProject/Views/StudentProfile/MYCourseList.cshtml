@@ -66,6 +66,7 @@
                         <th>Kurs Adı</th>
                         <th>Kateori</th>
                         <th>Eğitmen</th>
+                        <th>Puan Ver</th>
                         <th>Yorum Yap</th>
 
                     </tr>
@@ -79,6 +80,7 @@
                     <td>@item.Category.CategoryName</td>
                     <td>@item.Instructor.Name</td>
                     <td><a href="/StudentProfile/GivePointsCourse/@item.CourseID" class="btn btn-success">Puan Ver</a></td>
+                    <td><a href="/StudentProfile/CourseCommentAdd/@item.CourseID" class="btn btn-warning">Yorum Yap</a></td>
                 </tr>
 
                     }
